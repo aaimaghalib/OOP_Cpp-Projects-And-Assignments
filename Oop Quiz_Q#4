@@ -1,0 +1,55 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Student
+{
+private:
+    string name;
+    int age;
+
+public:
+    // Default constructor
+    Student()
+    {
+        name = "Unknown";
+        age = 0;
+    }
+
+    // Function to set name and age
+    void setInfo(string n, int a)
+    {
+        name = n;
+        age = a;
+    }
+
+    // Function to display student data
+    void display()
+    {
+        cout << "Name: " << name << " | Age: " << age << endl;
+    }
+};
+
+int main()
+{
+    // Array of 5 student objects
+    Student s[5];
+
+    // Setting information
+    s[0].setInfo("Ali", 20);
+    s[1].setInfo("Ahmed", 21);
+    s[2].setInfo("Sara", 19);
+    s[3].setInfo("Ayesha", 22);
+    s[4].setInfo("Hassan", 20);
+
+    // Displaying information
+    cout << "Student Information:\n";
+
+    for (int i = 0; i < 5; i++)
+    {
+        s[i].display();
+    }
+
+    return 0;
+}
