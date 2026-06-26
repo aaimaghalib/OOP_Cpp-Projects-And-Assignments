@@ -1,0 +1,44 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Student
+{
+private:
+    string name;
+
+public:
+    // Default constructor
+    Student()
+    {
+        name = "Unknown";
+    }
+
+    // Parameterized constructor
+    Student(string n)
+    {
+        name = n;
+    }
+
+    // Function to display name
+    void display()
+    {
+        cout << "Student Name: " << name << endl;
+    }
+};
+
+int main()
+{
+    // Object without passing name
+    Student s1;
+
+    // Object with passing name
+    Student s2("Aaima");
+
+    // Display names
+    s1.display();
+    s2.display();
+
+    return 0;
+}
