@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+// Structure definition
+struct Phone
+{
+    string part1;   // Area code
+    string part2;   // Exchange
+    string part3;   // Number
+};
+
+int main()
+{
+    Phone first, second;
+
+    // Predefined phone number
+    second.part1 = "212";
+    second.part2 = "767";
+    second.part3 = "8900";
+
+    // User input
+    cout << "Enter your area code, exchange, and number: ";
+    cin >> first.part1 >> first.part2 >> first.part3;
+
+    // Display predefined number
+    cout << "My number is (" << second.part1 << ") "
+         << second.part2 << "-" << second.part3 << endl;
+
+    // Display user number
+    cout << "Your number is (" << first.part1 << ") "
+         << first.part2 << "-" << first.part3 << endl;
+
+    return 0;
+}
